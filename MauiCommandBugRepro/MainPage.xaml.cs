@@ -13,7 +13,7 @@ public partial class MainPage : ContentPage
 
 	public bool PreventDelay { get; set; }
 
-    private async void DoDelay(object obj)
+    private async void DoDelay()
     {
         PreventDelay = true;
         DelayCommand.ChangeCanExecute();
@@ -22,7 +22,7 @@ public partial class MainPage : ContentPage
         DelayCommand.ChangeCanExecute();
     }
 
-    private bool CanDoDelay(object arg)
+    private bool CanDoDelay()
     {
         return !PreventDelay;
     }
